@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator kosztów montażu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="montaz_paneli.png" alt="firma usługowa">
+    </header>
+    <nav>
+        <a href="index.html">Strona Główna</a>
+        <a href="oferta.html">Oferta</a>
+        <a href="koszty.html">Kalkulator kosztów</a>
+    </nav>
+    <main>
+        <h1>Kalkulator kosztów montażu</h1>
+        <label for="width">Szerokość pomieszczenia [m]: </label>
+        <input type="number" id="width">
+        <label for="length">Długość pomieszczenia [m]: </label>
+        <input type="number" id="length">
+        <p>Typ panelu</p>
+        <input type="radio" name="panel" value="12"> Panele laminowane<br>
+        <input type="radio" name="panel" value="14"> Panele winylowe<br>
+        <input type="radio" name="panel" value="18"> Deska podłogowa<br>
+        <button onclick="calculateCost()">Oblicz</button>
+        <p id="result"></p>
+    </main>
+    <footer>
+        <h5>Autor strony: Fetisov Viktor</h5>
+    </footer>
+    <script>
+        function calculateCost() {
+            let width = document.getElementById('width').value;
+            let length = document.getElementById('length').value;
+            let panelType = document.querySelector('input[name="panel"]:checked').value;
+            let pole = width * length;
+            let coszt = pole * panelType;
+            document.getElementById('result').innerText = "Całkowity koszt: " + coszt +  "zł, Pole wynosi "+pole+"m^2";
+        }
+    </script>
+</body>
+</html>

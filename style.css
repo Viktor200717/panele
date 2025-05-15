@@ -1,0 +1,38 @@
+body {
+    font-family: Georgia, serif;
+    text-align: center;
+}
+header {
+    padding: 30px;
+    background: linear-gradient(to bottom,#A0522D, #F5DEB3 );
+}
+nav, main {
+    padding: 14px;
+    background-color: Wheat;
+}
+nav a {
+    background-color: Sienna;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    margin: 20px;
+    display: inline-block;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+table {
+    width: 70%;
+    margin: auto;
+    border: 1px solid Sienna;
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid Sienna;
+    padding: 5px;
+}
+footer {
+    padding: 30px;
+    background: linear-gradient(to top,#A0522D, #F5DEB3 );
+}
